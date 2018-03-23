@@ -1,0 +1,52 @@
+p {
+	font: 25px arial, sans-serif;
+	color: #ffffff;
+	text-shadow: 2px 2px #558ABB;
+}
+
+h1 {
+	font: 80px arial, sans-serif;
+	color: #ffffff;
+	text-shadow: 5px 5px #558ABB;
+}
+
+h2 {
+	font: 35px arial, sans-serif;
+	color: #ffffff;
+	text-shadow: 5px 5px #558ABB;
+}
+
+body {
+	background-color: #000022;
+	background-image: url(bg.png);
+	background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.content {
+	position: absolute;
+	left: 10vw;
+	right: 10vw;
+}
+
+hr {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 1px solid #ffffff;
+	border-bottom:  1px solid #558ABB;
+	left: 0px;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+li {
+	font: 20px arial, sans-serif;
+	color: #ffff04;
+	text-shadow: 5px 5px #558ABB;
+}
+
+a {
+	color: #ffff04;
+	text-shadow: 2px 2px #558ABB;
+}
