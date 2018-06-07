@@ -1,0 +1,55 @@
+.speech-bubble {
+	position: relative;
+	background: #00bbbb;
+	border-radius: .4em;
+	box-shadow: 0 10px 0 #00eeee;
+	
+	right: 0px;
+	left: 0px;
+}
+
+/*.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 31px solid transparent;
+	border-top-color:#00bbbb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -15.5px;
+	margin-bottom: -31px;
+}*/
+
+.speech-bubble:active {
+	transition: 0.2s;
+	box-shadow: 0 0 0 #00eeee;
+	transform: scale(0.96);
+}
+
+.speech-blue {
+	background: #0b99ff;
+	box-shadow: 0 10px 0 #8dcfff;
+	color: white;
+	font-size: 2vh;
+	padding: 1vh;
+	
+	margin-top: 10px;
+	
+	text-align: center;
+	
+	max-height: 19vh;
+	overflow-y: scroll;
+}
+
+.speech-container {
+	max-height: 48vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}

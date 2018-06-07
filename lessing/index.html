@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content=" img-src 'self'; default-src https://infiniteplaza.github.io; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';font-src 'self'">
+
+		
+		<meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/speechbubble.css">
+        <title>Lessing Heute</title>
+    </head>
+    <body>
+        <div class="app">
+		  <div class="bapp" id="bapp">
+            <h1 style="position: absolute">Lessing Heute</h1>
+            
+			<div class="splash" id="splash">
+				<h1 id="failedtoload">Laden...</h1>
+			</div>
+			
+			<div id="startmenu">
+				<div style="height: 20vh; width: 1vw;"></div>
+				<button id="start">Neues Zitat</button>
+				<div style="height: 16px;"></div>
+				<button id="showsteckbrief">Über Lessing</button>
+				<div style="height: 16px;"></div>
+				<button id="about">Android App</button>
+				<div style="height: 16px;"></div>
+				<button id="showfav" class="orange"><img class="emoji" src="emoji/fav.png"></img></button>
+				<button id="settings" class="orange" ><img class="emoji" src="emoji/settings.png"></img></button>
+			</div>
+			
+			<div id="definition" style="display: none;">
+				<p class="speech-bubble" id="def">
+						Fehler.
+				</p>
+				
+				<button id="closedef" class="orange">Okay</button>
+			</div>
+			
+			<div id="settingsdiv" style="position:absolute; bottom:-200vh;height:82vh;width:96vw;left:2vw;overflow-y:scroll">
+				<button class="orange" id="hidesettings">
+					Zurück</button>
+				
+				<p class="speech-bubble setting" id="togglefilter">
+					Zeige nur Zitate mit einer Interpretation (AUS)
+				</p>
+
+				<p class="speech-bubble setting" id="delfavs">
+					Alle Favoriten löschen
+				</p><br><br><br>
+				
+				
+				<button class="orange" >
+					Über diese App
+				</button>
+				
+				<p class="speech-bubble setting">
+					Diese App ist das Produkt eines Schulprojektes, in welchem sich die Schüler mit Gotthold Ephraim Lessing auseinander setzen sollten.
+					Unsere Gruppe entschied sich, wie Sie hier sehen können, für die Erstellung einer App, welche bekannte Zitate Lessings anzeigt.
+					<br><br>
+					Diese App benutzt emojis aus Google's "Noto" Projekt, mehr dazu <a href="https://www.google.com/get/noto/" onclick="window.open(this.href); return false">hier</a>.
+				</p>
+				
+			</div>
+			
+			
+			
+			<div id="favdiv" style="position:absolute; bottom:-200vh;height:90vh;width:96vw;left:2vw; overflow-y: scroll;">
+				<p class="speech-bubble speech-blue" id="hidefav">
+						Zurück
+				</p>
+				<div id="favdivcontent">
+					<!--<button class="favitem">Zeige nur Zitate mit einer Interpretation (AUS)</button><button class="favremove">X</button>-->
+				</div>
+			</div>
+			
+			<div id="steckbrief">
+				<button class="orange" id="hidesteckbrief">Zurück</button>
+				<p class="speech-bubble">
+					Gotthold Ephraim Lessing - Steckbrief
+					<br>
+					<br>
+					Geboren am 22 Januar 1729 in Kamenz<br>
+					Mutter: Justina Salame Lessing<br>
+					Vater: Johann Gottfried Lessing
+					<br><br>
+					Gotthold hatte fünf Geschwister:<br>
+						Karl Gotthelf, Gottlob Samuel, Dorothea Salame, Gottfried Benjamin und Johann Gottlieb.
+						<br><br>
+					Später heiratete er Eva Künig.<br>
+					<br>
+					Seine schulische Karriere startete mit dem Privatunterricht des Vaters, doch besuchte er ebenfalls eine Lateinschule und eine Fürstenschule.<br>
+					Danach studierte er in Wittenberg Medizin, aber besuchte die Universität Leipzig.
+					<br><br>
+					Lessing arbeitete im Laufe seines Lebens unter anderem als Philisoph, Bibliothekar, Kunstkritiker, Kommentator und natürlich Dramatiker.<br>
+					<br>
+					Nieder ließ er sich sowohl in Kamenz als auch in Meißen, Leipzig, Wittenberg, Berlin, Breslau, Hamburg, Wattenbüttel und Braunschweig.<br>
+					<br>
+					Gotthold Ephraim Lessing verstarb am 15 Februar 1781 in Braunschweig.
+				</p>
+			</div>
+			
+			<div id="container">
+				<p class="speech-bubble" id="msg">
+						Es scheint so, als wäre etwas schief gelaufen.
+				</p>
+				
+				<p class="speech-bubble speech-blue" id="creator">
+					Es scheint so, als wäre etwas schief gelaufen	
+				</p><br>
+				
+				<button id="favquote" class="orange"><img class="emoji" src="emoji/fav.png"></img></button>
+				<button id="what" class="orange"><img class="emoji" src="emoji/what.png"></img></button>
+				<button id="backtomenu" class="orange" style="display: block !important">Zurück</button>
+			</div>
+			
+			<span class="creator">2018 InfinitePlaza</span>
+			</div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
